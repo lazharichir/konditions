@@ -1,0 +1,49 @@
+{
+	"name": "konditions",
+	"version": "0.0.1",
+	"description": "A simple and customizable JSON-based condition engine in TypeScript (e.g. GreaterThan, StringLike, Every, Some)",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"type": "module",
+	"files": [
+		"dist/**/*"
+	],
+	"scripts": {
+		"clean": "rimraf ./dist && rimraf ./coverage",
+		"lint": "eslint 'src/**/*.ts'",
+		"lint:fix": "eslint --fix 'src/**/*.ts'",
+		"compile:watch": "tsc --watch",
+		"compile": "tsc",
+		"prebuild": "npm run clean && npm run lint && npm run test",
+		"build": "npm run prep",
+		"test": "jest --verbose --coverage"
+	},
+	"devDependencies": {
+		"@typescript-eslint/eslint-plugin": "^3.8.0",
+		"@typescript-eslint/parser": "^3.8.0",
+		"eslint": "^7.6.0",
+		"eslint-config-prettier": "^6.11.0",
+		"eslint-plugin-import": "^2.22.0",
+		"eslint-plugin-prettier": "^3.1.4",
+		"prettier": "^2.0.5",
+		"@types/jest": "^26.0.9",
+		"jest": "^26.2.2",
+		"typescript": "next",
+		"ts-jest": "^26.1.4",
+		"rimraf": "^3.0.2",
+		"ts-node": "^8.10.2"
+	},
+	"dependencies": {
+		"zod": "^1.10.2"
+	},
+	"author": "Lazhar Ichir",
+	"license": "GNU General Public License v3.0",
+	"homepage": "https://github.com/lazharichir/konditions#readme",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/lazharichir/konditions.git"
+	},
+	"bugs": {
+		"url": "https://github.com/lazharichir/konditions/issues"
+	}
+}

@@ -1,0 +1,30 @@
+{
+	"include": ["src/**/*.ts", "tests/**/*.ts"],
+	"exclude": ["node_modules", "dist"],
+	"compilerOptions": {
+		/* Basic Options */
+		"sourceMap": true,
+		"target": "ES2019",
+
+		/* Modules */
+		"module": "commonjs",
+		"moduleResolution": "node",
+		"resolveJsonModule": true,
+
+		/* IO */
+		"rootDir": "./src",
+		"outDir": "./dist",
+
+		/* Declarations */
+		"declaration": true,
+
+		/* Strict Type-Checking Options */
+		"strict": true /* Enable all strict type-checking options. */,
+
+		/* Module Resolution Options */
+		"esModuleInterop": true /* Enables emit interoperability between CommonJS and ES Modules via creation of namespace objects for all imports. Implies 'allowSyntheticDefaultImports'. */,
+
+		/* Advanced Options */
+		"forceConsistentCasingInFileNames": true /* Disallow inconsistently-cased references to the same file. */
+	}
+}
