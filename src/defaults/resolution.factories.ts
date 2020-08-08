@@ -1,4 +1,11 @@
-import { FailedResolution, FailedValidationResolution, SuccessfulResolution, UnexpectedError, UnsuccessfulResolution, ValidationError, ValidationErrorReason } from "./resolution"
+import {
+	FailedResolution,
+	SuccessfulResolution,
+	UnexpectedError,
+	UnsuccessfulResolution,
+	ValidationError,
+	ValidationErrorReason,
+} from "./resolution"
 
 export const makeResolution = (passed: boolean): UnsuccessfulResolution | SuccessfulResolution => {
 	return passed ? makeSuccessfulResolution() : makeUnuccessfulResolution()
@@ -6,23 +13,25 @@ export const makeResolution = (passed: boolean): UnsuccessfulResolution | Succes
 
 export const makeSuccessfulResolution = (): SuccessfulResolution => {
 	return {
-		passed: true
+		passed: true,
 	}
 }
 
 export const makeUnuccessfulResolution = (): UnsuccessfulResolution => {
 	return {
-		passed: false
+		passed: false,
 	}
 }
 
-export const makeValidationFailedResolution = (reasons: ValidationErrorReason[] = []): FailedResolution<ValidationError> => {
+export const makeValidationFailedResolution = (
+	reasons: ValidationErrorReason[] = []
+): FailedResolution<ValidationError> => {
 	return {
 		passed: false,
 		error: {
 			type: `ValidationError`,
-			reasons
-		}
+			reasons,
+		},
 	}
 }
 
@@ -32,6 +41,6 @@ export const makeUnexpectedFailedResolution = (): FailedResolution<UnexpectedErr
 		error: {
 			type: `UnexpectedError`,
 			message: `We encountered an unexpected error.`,
-		}
+		},
 	}
 }
