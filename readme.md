@@ -1,3 +1,5 @@
+# Konditions
+
 A simple customizable conditions and rules engine that allows you to evaluate JSON documents describing one or multiple conditions.
 
 Here is a very simple a example:
@@ -33,8 +35,6 @@ const secondInput = {
 const secondEvaluation = await engine.evaluate(input)
 // secondEvaluation.passed === false
 ```
-
-# Konditions
 
 The client using this library should generally create its own Engine along with its own Conditions (i.e. validators and resolvers) since they are really application-specific.
 
